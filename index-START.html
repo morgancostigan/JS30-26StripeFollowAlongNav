@@ -221,7 +221,7 @@
 </style>
 
 <script>
-  const trigger = document.querySelectorAll('.cool > li'); //all direct decendents act as trigger
+  const triggers = document.querySelectorAll('.cool > li'); //all direct decendents act as trigger
   const background = document.querySelector('.dropdownBackground'); //this is that white dropdown  
   const nav = document.querySelector('.top'); //nav bar
 
@@ -234,8 +234,8 @@
     console.log('WAIHO!');
   }//end handleLeave function
 
-  trigger.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));//fires handleEnter function
-  trigger.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));//fires handleLevae function 
+  triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));//fires handleEnter function
+  triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));//fires handleLevae function 
 
 </script>
 
