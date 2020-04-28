@@ -167,6 +167,7 @@
     opacity:0;
   }
 
+  /* this makes background  visible */
   .dropdownBackground.open {
     opacity: 1;
   }
@@ -228,14 +229,18 @@
   const nav = document.querySelector('.top'); //nav bar
 
   function handleEnter() {
-    console.log('TOMO!');
+    // console.log('TOMO!');
     this.classList.add('trigger-enter');
     setTimeout(() => this.classList.add('trigger-enter-active'), 150); //gives a 150ms pause for transition between list items
     background.classList.add('open');//adds white background
+
+    const dropdown = this.querySelector('.dropdown');//this is the specific dropdown you hovered on 
+    console.log(dropdown);
+    
   }//end handleEnter function
 
   function handleLeave() {
-    console.log('WAIHO!');
+    // console.log('WAIHO!');
     this.classList.remove('trigger-enter', 'trigger-enter-active');
     background.classList.remove('open');//removes white background
   }//end handleLeave function
