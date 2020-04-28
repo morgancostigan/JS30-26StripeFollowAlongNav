@@ -5,7 +5,7 @@
   <title>Follow Along Nav</title>
 </head>
 <body>
-  <!-- <h2>Cool</h2> -->
+  <h2>Cool</h2> 
   <!-- white box background div, will auto resize  to content-->
   <nav class="top">
     <div class="dropdownBackground"> 
@@ -241,8 +241,8 @@
     const coords = {
       height: dropdownCoords.height,
       width: dropdownCoords.width,
-      top: dropdownCoords.top,
-      left: dropdownCoords.left
+      top: dropdownCoords.top - navCoords.top,
+      left: dropdownCoords.left - navCoords.left
     };//end coords 
 
     background.style.setProperty('width', `${coords.width}px`);
