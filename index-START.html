@@ -143,10 +143,12 @@
     display: none;
   }
 
+  /* for animating in and out, this brings the dropdown in */
   .trigger-enter .dropdown {
     display: block;
   }
 
+  /* and this makes it visible */
   .trigger-enter-active .dropdown {
     opacity: 1;
   }
@@ -227,11 +229,14 @@
 
   function handleEnter() {
     console.log('TOMO!');
-    
+    this.classList.add('trigger-enter');
+    setTimeout(() => this.classList.add('trigger-enter-active'), 150); //gives a 150ms pause for transition between list items
   }//end handleEnter function
 
   function handleLeave() {
     console.log('WAIHO!');
+    this.classList.remove('trigger-enter');
+    setTimeout(() => this.classList.add('trigger-enter-active'), 150); //gives a 150ms pause for transition between list items
   }//end handleLeave function
 
   triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));//fires handleEnter function
