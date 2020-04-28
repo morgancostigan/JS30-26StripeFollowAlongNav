@@ -235,7 +235,17 @@
     background.classList.add('open');//adds white background
 
     const dropdown = this.querySelector('.dropdown');//this is the specific dropdown you hovered on 
-    console.log(dropdown);
+    // console.log(dropdown);
+    const dropdownCoords = dropdown.getBoundingClientRect(); //get location of dropdown
+    const navCoords = nav.getBoundingClientRect(); //get location of nav
+    const coords = {
+      height: dropdownCoords.height,
+      width: dropdownCoords.width
+    };//end coords 
+    console.log(coords);
+    
+     
+    
     
   }//end handleEnter function
 
