@@ -231,11 +231,15 @@
   function handleEnter() {
     // console.log('TOMO!');
     this.classList.add('trigger-enter');
-    setTimeout(() => {
-      if(this.classList.contains('trigger-enter')) {
-        this.classList.add('trigger-enter-active')
-      }//end IF
-    }, 150); //gives a 150ms pause for transition between list items, IF prevents weird lag if you exit before the 150ms
+
+    setTimeout(() => this.classList.contains('trigger-enter') && this.classList.add('trigger-enter-active'), 150);//shorter version of below block
+
+    // setTimeout(() => {
+    //   if(this.classList.contains('trigger-enter')) {
+    //     this.classList.add('trigger-enter-active')
+    //   }//end IF
+    // }, 150); //gives a 150ms pause for transition between list items, IF prevents weird lag if you exit before the 150ms
+
     background.classList.add('open');//adds white background
 
     const dropdown = this.querySelector('.dropdown');//this is the specific dropdown you hovered on 
