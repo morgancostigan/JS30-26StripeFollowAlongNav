@@ -231,12 +231,13 @@
     console.log('TOMO!');
     this.classList.add('trigger-enter');
     setTimeout(() => this.classList.add('trigger-enter-active'), 150); //gives a 150ms pause for transition between list items
+    background.classList.add('open');//adds white background
   }//end handleEnter function
 
   function handleLeave() {
     console.log('WAIHO!');
-    this.classList.remove('trigger-enter');
-    setTimeout(() => this.classList.add('trigger-enter-active'), 150); //gives a 150ms pause for transition between list items
+    this.classList.remove('trigger-enter', 'trigger-enter-active');
+    background.classList.remove('open');//removes white background
   }//end handleLeave function
 
   triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));//fires handleEnter function
