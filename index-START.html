@@ -247,8 +247,9 @@
 
     background.style.setProperty('width', `${coords.width}px`);
     background.style.setProperty('height', `${coords.height}px`); //applies size based on coords
-    background.style.setProperty('top', `${coords.top}px`);
-    background.style.setProperty('left', `${coords.left}px`); //applies location based on coords
+    // background.style.setProperty('top', `${coords.top}px`);
+    // background.style.setProperty('left', `${coords.left}px`); //applies location based on coords, two line version
+    background.style.setProperty('transform', `translate(${coords.left}px, ${coords.top}px)`); //applies location based on coords, one line version
     
   }//end handleEnter function
 
